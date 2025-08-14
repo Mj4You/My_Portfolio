@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,15 +10,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #5eead4; 
-      --secondary-color: #60a5fa; 
-      --bg-color: #0c0a09; 
+      --primary-color: #5eead4;
+      --secondary-color: #60a5fa;
+      --bg-color: #0c0a09;
       --card-bg: #1f1f1f;
       --border-color: #3f3f46;
       --text-color: #e4e4e7;
       --subtle-text: #a1a1aa;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--bg-color);
@@ -27,6 +34,7 @@
       position: relative;
       line-height: 1.6;
     }
+
     .background-glow {
       position: absolute;
       top: 50%;
@@ -40,17 +48,34 @@
       animation: slow-pulse 10s infinite ease-in-out;
       z-index: 0;
     }
+
     @keyframes slow-pulse {
-      0%, 100% { transform: translate(-50%, -50%) scale(1); }
-      50% { transform: translate(-50%, -50%) scale(1.05); }
+
+      0%,
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      50% {
+        transform: translate(-50%, -50%) scale(1.05);
+      }
     }
+
     .container {
       position: relative;
       z-index: 1;
       max-width: 1000px;
       margin: 0 auto;
     }
-    h2 { font-size: 1.5rem; color: var(--subtle-text); margin-bottom: 0.5rem; font-weight: 600; text-align: center; }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--subtle-text);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
     h1 {
       font-size: 3rem;
       background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
@@ -60,7 +85,14 @@
       margin-bottom: 1rem;
       text-align: center;
     }
-    p { font-size: 1rem; color: var(--subtle-text); max-width: 700px; margin: 0 auto; }
+
+    p {
+      font-size: 1rem;
+      color: var(--subtle-text);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
     .buttons {
       margin-top: 2rem;
       display: flex;
@@ -68,6 +100,7 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
+
     .button {
       background-color: var(--card-bg);
       color: var(--text-color);
@@ -78,18 +111,21 @@
       text-decoration: none;
       transition: 0.3s ease-in-out;
     }
+
     .button:hover {
       transform: translateY(-2px);
       background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       color: var(--bg-color);
       border-color: transparent;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       margin-top: 3rem;
     }
+
     .card {
       background-color: var(--card-bg);
       border: 1px solid var(--border-color);
@@ -97,21 +133,29 @@
       border-radius: 1rem;
       transition: all 0.3s ease-in-out;
     }
+
     .card:hover {
       transform: translateY(-5px);
       border-color: var(--primary-color);
     }
-    .card h3 { color: var(--primary-color); margin-bottom: 0.5rem; }
+
+    .card h3 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
     footer {
       text-align: center;
       margin-top: 3rem;
       color: var(--subtle-text);
       font-size: 0.875rem;
     }
+
     /* PAGE 2 BLOG SECTION */
     .section {
       margin-top: 5rem;
     }
+
     .blog-card {
       background-color: var(--card-bg);
       padding: 1.5rem;
@@ -119,25 +163,34 @@
       border-radius: 1rem;
       margin-bottom: 2rem;
     }
-    .blog-card h4 { color: var(--primary-color); margin-bottom: 0.5rem; }
+
+    .blog-card h4 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
     .timeline {
       margin-top: 3rem;
       border-left: 2px solid var(--primary-color);
       padding-left: 1rem;
     }
+
     .timeline-item {
       margin-bottom: 2rem;
     }
+
     .timeline-item span {
       font-size: 0.9rem;
       color: var(--subtle-text);
     }
+
     .tools-list {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       margin-top: 1rem;
     }
+
     .tool {
       background: var(--card-bg);
       padding: 0.5rem 1rem;
@@ -147,6 +200,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="background-glow"></div>
   <div class="container">
@@ -154,7 +208,8 @@
     <!-- PAGE 1 -->
     <h2>Md Mujtaba Haider</h2>
     <h1>DevOps Engineer</h1>
-    <p>Passionate about automating, securing, and scaling modern cloud infrastructures with a touch of DevSecOps best practices.</p>
+    <p>Passionate about automating, securing, and scaling modern cloud infrastructures with a touch of DevSecOps best
+      practices.</p>
     <div class="buttons">
       <a class="button" href="https://github.com/Mj4You" target="_blank">GitHub</a>
       <a class="button" href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
@@ -162,12 +217,30 @@
     </div>
 
     <div class="grid">
-      <div class="card"><h3>CI/CD Pipelines</h3><p>Experience with Jenkins, GitLab CI, and GitHub Actions for automated deployments.</p></div>
-      <div class="card"><h3>Cloud Infrastructure</h3><p>Expert in AWS, Azure, and GCP with Terraform & CloudFormation.</p></div>
-      <div class="card"><h3>Containerization</h3><p>Docker & Kubernetes expert with cluster scaling and monitoring.</p></div>
-      <div class="card"><h3>Monitoring & Logging</h3><p>Prometheus, Grafana, and ELK for observability and performance tuning.</p></div>
-      <div class="card"><h3>IaC</h3><p>Automated infra with Ansible, Terraform, Pulumi.</p></div>
-      <div class="card"><h3>Security</h3><p>Integrated security scanning & policy enforcement in pipelines.</p></div>
+      <div class="card">
+        <h3>CI/CD Pipelines</h3>
+        <p>Experience with Jenkins, GitLab CI, and GitHub Actions for automated deployments.</p>
+      </div>
+      <div class="card">
+        <h3>Cloud Infrastructure</h3>
+        <p>Expert in AWS, Azure, and GCP with Terraform & CloudFormation.</p>
+      </div>
+      <div class="card">
+        <h3>Containerization</h3>
+        <p>Docker & Kubernetes expert with cluster scaling and monitoring.</p>
+      </div>
+      <div class="card">
+        <h3>Monitoring & Logging</h3>
+        <p>Prometheus, Grafana, and ELK for observability and performance tuning.</p>
+      </div>
+      <div class="card">
+        <h3>IaC</h3>
+        <p>Automated infra with Ansible, Terraform, Pulumi.</p>
+      </div>
+      <div class="card">
+        <h3>Security</h3>
+        <p>Integrated security scanning & policy enforcement in pipelines.</p>
+      </div>
     </div>
 
     <!-- PAGE 2 CONTENT -->
@@ -176,17 +249,20 @@
 
       <div class="blog-card">
         <h4>Optimizing Kubernetes for High Availability</h4>
-        <p>Learn how I implemented a multi-AZ Kubernetes cluster on AWS EKS with auto-scaling, zero-downtime deployments, and cost-efficient resource management.</p>
+        <p>Learn how I implemented a multi-AZ Kubernetes cluster on AWS EKS with auto-scaling, zero-downtime
+          deployments, and cost-efficient resource management.</p>
       </div>
 
       <div class="blog-card">
         <h4>Terraform Best Practices for Large Teams</h4>
-        <p>Shared my approach to structuring Terraform codebases using workspaces, remote state, and modules for collaborative infrastructure development.</p>
+        <p>Shared my approach to structuring Terraform codebases using workspaces, remote state, and modules for
+          collaborative infrastructure development.</p>
       </div>
 
       <div class="blog-card">
         <h4>Integrating Security in CI/CD</h4>
-        <p>A step-by-step guide on adding SAST, DAST, and dependency vulnerability scans to your pipelines without slowing development.</p>
+        <p>A step-by-step guide on adding SAST, DAST, and dependency vulnerability scans to your pipelines without
+          slowing development.</p>
       </div>
     </div>
 
@@ -194,14 +270,10 @@
       <h1>Experience Timeline</h1>
       <div class="timeline">
         <div class="timeline-item">
-          <h4>DevOps Engineer - XYZ Corp</h4>
-          <span>2022 - Present</span>
-          <p>Implemented CI/CD pipelines & IaC for multi-cloud environments serving millions of users.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Cloud Engineer - ABC Solutions</h4>
-          <span>2020 - 2022</span>
-          <p>Managed AWS and Azure workloads, improved cost efficiency by 30%.</p>
+          <h4>DevSecOps Engineer - LambdaTest</h4>
+          <span>May, 2025 - present</span>
+          <p>Built an internal platform for real-time SSL certificate validity checks, removing the need for manual
+            script execution. Improved efficiency and accessibility for employees.</p>
         </div>
       </div>
     </div>
@@ -229,4 +301,5 @@
     </footer>
   </div>
 </body>
+
 </html>
